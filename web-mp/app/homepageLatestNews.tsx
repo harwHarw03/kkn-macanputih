@@ -74,14 +74,14 @@ export default function HomepageLatestNews() {
             <CardDescription className="flex justify-center items-center"></CardDescription>
           </CardHeader>
           <CardContent className="md:grid grid-cols-2 gap-8">
-            <FeaturedArticle
+            {/* <FeaturedArticle
               id={blogs[0].slug}
               title={blogs[0].meta.title}
               date={blogs[0].meta.date}
               category={blogs[0].meta.category}
               instagramURL={blogs[0].meta.instagramURL}
               photo={blogs[0].meta.photo}
-            />
+            /> */}
             <div className="w-full md:flex flex-col grid grid-cols-1 gap-4 mt-8">
               <h3 className="text-2xl font-extrabold text-center">
                 Terbitan Terbaru
