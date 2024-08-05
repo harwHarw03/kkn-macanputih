@@ -1,10 +1,17 @@
-
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
+import { buttonVariants } from "@/components/ui/button";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import sosmedData from "@/data/sosmed.json";
+import { Instagram, Youtube, Github, Facebook } from "lucide-react";
 import Image from "next/image";
 import HeroImage from "@/public/hero.webp";
 
-export default function HeroSection() {
+export default function HomepageHero() {
   return (
     <div id="homepage-hero" className="relative">
       <div id="hero-image" className="h-[720px] relative">
@@ -26,14 +33,14 @@ export default function HeroSection() {
               Desa MacanPutih
             </h1>
             <p className="text-gray-300 font-medium leading-relaxed text-center max-w-xl lg:max-w-2xl mb-4 md:mb-7 text-sm md:text-base">
-              Temukan referensi dan informasi terkini seputar Desa MacanPutih
+              Temukan referensi dan informasi terkini seputar Desa Macan Putih
             </p>
             <div className="max-w-xl lg:max-w-2xl w-full">
               <section>
                 <h2 className="font-bold text-base leading-6 text-center text-gray-300 mb-4">
-                  Seputar Desa MacanPutih
+                  Seputar Desa Macan Putih
                 </h2>
-                {/* <Carousel>
+                <Carousel>
                   <CarouselContent>
                     <CarouselItem className="basis-1/2">
                       <Link
@@ -42,7 +49,7 @@ export default function HeroSection() {
                         })} w-full py-4 font-semibold`}
                         href={"/sejarah"}
                       >
-                        Sejarah Kuy
+                        Sejarah
                       </Link>
                     </CarouselItem>
                     <CarouselItem className="basis-1/2">
@@ -66,18 +73,47 @@ export default function HeroSection() {
                       </Link>
                     </CarouselItem>
                   </CarouselContent>
-                </Carousel> */}
+                </Carousel>
               </section>
             </div>
             <div className="w-full max-w-xl">
               <div className="flex flex-col mt-6 content-center">
                 <Button asChild variant={"default"} className="py-6">
-                  <Link href="/statistik">Statistik Desa MacanPutih</Link>
+                  <Link href="/statistik">Statistik Desa Macan Putih</Link>
                 </Button>
-
+                {/* <Button asChild variant={"default"} className="py-6">
+                  <Link href={"https://instagram.com/"}>
+                    Kirim Berita atau Artikel
+                  </Link>
+                </Button> */}
               </div>
             </div>
-
+            <ul className="flex w-full max-w-xl mt-4 justify-evenly gap-6">
+              {sosmedData.map((sosmed, index) => (
+                <li key={index} className="flex items-center">
+                  <Link
+                    href={sosmed.url}
+                    className="relative size-12 items-center justify-center flex rounded-full p-2 hover:bg-gray-700 transition-colors duration-300 ease-in-out"
+                    aria-label={sosmed.media}
+                  >
+                    {/* if sosmed are facebook, show facebook components and so on */}
+                    {sosmed.media === "instagram" && (
+                      <Instagram color="#fff" className="z-10" />
+                    )}
+                    {sosmed.media === "youtube" && (
+                      <Youtube color="#fff" className="z-10" />
+                    )}
+                    {sosmed.media === "github" && (
+                      <Github color="#ffffff" className="z-10" />
+                    )}
+                    {sosmed.media === "facebook" && (
+                      <Facebook color="#fff" className="z-10" />
+                    )}
+                    <div className="absolute bg-black top-0 left-0 w-full h-full rounded-full z-[1] opacity-50 " />
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>

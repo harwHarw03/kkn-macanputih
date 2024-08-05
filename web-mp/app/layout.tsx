@@ -1,24 +1,21 @@
-import type { Metadata, Viewport } from "next";
-import { Inter, Plus_Jakarta_Sans } from "next/font/google";
+import type { Metadata } from "next";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
+import Footer from "./footer";
+import type { Viewport } from "next";
+import Header from "./header";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { Organization, WithContext } from "schema-dts";
 
-import Header from '@/components/header';
-import Footer from '@/components/footer';
-
-const inter = Inter({ subsets: ["latin"] });
-
 export const viewport: Viewport = {
-  themeColor: '#051B2E'
+  themeColor: "#051B2E",
 };
 
-export const metadata: Metadata = {
-  title: "Profil Desa MacanPutih",
-  publisher: "",
-  keywords: ["KKN", "Macan Putih", "Desa", "Profil", "Banyuwangi"],
-  description: "Website Profil Desa MacanPutih, Banyuwangi",
-};
-
+const PJS = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "500", "600", "700", "800"],
+});
 
 export default function RootLayout({
   children,
@@ -26,14 +23,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        {/* <Navbar /> */}
+    <html lang="id">
+      <body className={PJS.className}>
         <Header />
         {children}
         <Footer />
+
       </body>
-      
     </html>
   );
-};
+}
