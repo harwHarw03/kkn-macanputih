@@ -1,4 +1,4 @@
-import GeoFile from "@/data/brooklyn.json";
+import geoFileData from "@/data/tokyo.json";
 import {
   Table,
   TableBody,
@@ -10,21 +10,28 @@ import {
 
 export interface GeoFiles {
   type: string;
-  generator: string;
-  bbox: number[];
+  generator?: string;
+  bbox?: number[];
   features: Feature[];
 }
 
 interface Geometry {
+  type: string;
   coordinates: Array<Array<[number, number]>>;
 }
 
 interface Properties {
-  amenity: string;
-  name: string;
+  ward_ja: string;
+  ward_en: string | null;
+  area_ja: string;
+  area_en: string | null;
+  code: number | null;
+  amenity?: string;
+  name?: string;
 }
 
 interface Feature {
+  type: string;
   properties: Properties;
   geometry: Geometry;
 }
@@ -67,47 +74,16 @@ const CoordinateLink = ({ coordinates }: any) => {
 export default function GeoFileExtract() {
   return (
     <div>
-      <EducationFacility />
+      {/* <EducationFacility /> */}
       <WorshipPlaces />
-    </div>
-  );
-}
-
-function EducationFacility() {
-  const title = "Fasilitas Pendidikan";
-  const educationFacility = GeoFile.features.filter(
-    (data) => data.properties.amenity === "school"
-  );
-
-  return (
-    <div className="py-4 flex flex-col gap-4">
-      <h2 className="text-3xl font-bold">{title}</h2>
-      <Table>
-        <TableHeader>
-          <TableRow>
-            <TableHead>Name</TableHead>
-            <TableHead>Coordinates</TableHead>
-          </TableRow>
-        </TableHeader>
-        <TableBody>
-          {educationFacility.map((data, index) => (
-            <TableRow key={index}>
-              <TableCell>{data.properties.name}</TableCell>
-              <TableCell>
-                <CoordinateLink coordinates={data.geometry.coordinates[0]} />
-              </TableCell>
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
     </div>
   );
 }
 
 function WorshipPlaces() {
   const title = "Fasilitas Ibadah";
-  const educationFacility = GeoFile.features.filter(
-    (data) => data.properties.amenity === "place_of_worship"
+  const worshipPlaces = geoFileData.features.filter(
+    (data) => data.properties.area_en === "Tokubu"
   );
 
   return (
@@ -121,9 +97,9 @@ function WorshipPlaces() {
           </TableRow>
         </TableHeader>
         <TableBody>
-          {educationFacility.map((data, index) => (
+          {worshipPlaces.map((data, index) => (
             <TableRow key={index}>
-              <TableCell>{data.properties.name}</TableCell>
+              <TableCell>{data.properties.area_ja ?? "No Name"}</TableCell>
               <TableCell>
                 <CoordinateLink coordinates={data.geometry.coordinates[0]} />
               </TableCell>
@@ -134,4 +110,3 @@ function WorshipPlaces() {
     </div>
   );
 }
-

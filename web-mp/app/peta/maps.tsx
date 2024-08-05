@@ -11,7 +11,7 @@ import {
 import "leaflet/dist/leaflet.css";
 import "leaflet-defaulticon-compatibility";
 import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";
-import geojsondata from "@/data/brooklyn.json";
+import geojsondata from "@/data/tokyo.json";
 
 export default function Maps(props: any) {
   const { position, zoom } = props;
@@ -24,7 +24,7 @@ export default function Maps(props: any) {
 
   return (
     <MapContainer
-      center={[40.650002, -73.949997]}
+      center={[35.658581, 139.745438]}
       zoom={17}
       scrollWheelZoom={true}
       style={{ height: "100%", width: "100%" }}
