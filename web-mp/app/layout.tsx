@@ -4,6 +4,7 @@ import "./globals.css";
 import Footer from "./footer";
 import type { Viewport } from "next";
 import Header from "./header";
+import Head from 'next/head';
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { Organization, WithContext } from "schema-dts";
 
@@ -24,6 +25,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="id">
+      <Head>
+          <link rel="icon" href="./favicon.ico" />
+        </Head>
       <body className={PJS.className}>
         <Header />
         {children}

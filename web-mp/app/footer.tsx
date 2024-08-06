@@ -148,7 +148,7 @@ function SitemapGroup() {
             Ekosistem Macan Putih
           </AccordionTrigger>
           <AccordionContent className="flex flex-col gap-4">
-            <Link href={"https://Macan Putih-wonoayu.desa.id"}>
+            <Link href={"https://MacanPutih.desa.id"}>
               Website Desa
             </Link>
             <Link href={"https://kemendesa.go.id"}>Kementerian Desa</Link>

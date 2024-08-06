@@ -29,6 +29,11 @@ const nextConfig = {
               "'self' *.googletagmanager.com *.youtube.com *.google.com *.tableau.com *.openstreetmap.org",
             "style-src":
               "'self' 'unsafe-inline' fonts.googleapis.com cdn.jsdelivr.net",
+            "connect-src":
+              "'self' *.googletagmanager.com *.google-analytics.com sid.kemendesa.go.id",
+            "img-src":
+              "'self' data: *.ytimg.com *.tile.openstreetmap.org *.bmkg.go.id",
+            "frame-ancestors": "'self' *.kemendesa.go.id",
           },
           frameoptions: false,
         }),
