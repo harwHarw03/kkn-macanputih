@@ -39,7 +39,7 @@ export default function Header() {
       <div className="container mx-auto px-6 2xl:px-0 xl:max-w-7xl">
         <nav className="flex items-center">
           <Link href={"/"} className="font-bold text-white py-2">
-            Macan Putih {currentRoute}
+            MacanPutih {currentRoute}
           </Link>
         </nav>
       </div>

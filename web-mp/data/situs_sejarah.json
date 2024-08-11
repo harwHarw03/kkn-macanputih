@@ -1,0 +1,208 @@
+{
+  "type": "FeatureCollection",
+  "name": "situs sejarah",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:EPSG::32750"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "Name_2": "Tugu Timur",
+        "Jenis": "Monumen",
+        "Deskripsi": null
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [202693.1392425865, 9084339.597024176, 77.22283695011843]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name_2": "Tugu Barat",
+        "Jenis": "Monumen",
+        "Deskripsi": null
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [201266.9810950767, 9085532.12912104, 106.3750958589073]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name_2": "Monumen Tulien Ngetan Ilingo Kawitane",
+        "Jenis": "Monumen",
+        "Deskripsi": "\"Prabu Tawangalun, Putra Daerah Hang Bangun Keraton Macan Putih Gegelar Sesuhunan Blambangan\"."
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [201456.2476634343, 9085151.283438368, 100.5305350836113]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name_2": "Tugu Utara",
+        "Jenis": "Monumen",
+        "Deskripsi": null
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [201040.47828084166, 9084573.266859611, 112.1064375272194]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name_2": "Tugu Selatan",
+        "Jenis": "Monumen",
+        "Deskripsi": "Berbentuk gapura selamat datang"
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [201459.2964408268, 9083904.756241428, 78.20949808325821]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name_2": "Sasak Abang",
+        "Jenis": "Bangunan",
+        "Deskripsi": "Sasak Abang atau Jembatan Merah dibuat pada tahun 1927 oleh kerja paksa penjajahan Jepang. Terbuat dari potongan drum berwarna merah. Saluran irigasi dimulai dari Dam Poncowati dan berfungsi mengairi area persawahan di Desa Macanputih, Gombolirang, hingg"
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [201499.5693815184, 9085471.865246437, 102.6602528232272]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name_2": "Reruntuhan Tembok Sisi Utara",
+        "Jenis": "Reruntuhan",
+        "Deskripsi": null
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [201601.71107614884, 9085423.551884288, 99.84136749907715]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name_2": "Reruntuhan Tembok Sisi Barat",
+        "Jenis": "Reruntuhan",
+        "Deskripsi": null
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [201006.61628497258, 9084449.463945795, 100.5448575484417]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name_2": "Menara Intai",
+        "Jenis": "Bangunan",
+        "Deskripsi": null
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [200535.47487615893, 9084761.50576755, 126.4341814236319]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name_2": "Petilasan",
+        "Jenis": "Bangunan",
+        "Deskripsi": null
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [202006.8979866075, 9084247.284342341, 84.84968800808998]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name_2": "Pusat Informasi Sejarah",
+        "Jenis": "Bangunan",
+        "Deskripsi": "Tokoh mayarakat pengelola sejarah dan kearifan lokal. Kediaman Bapak Joko Sastro dan Bapak Irwan Hidayatnanta"
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [201230.68785336684, 9084594.771686822, 106.0336985501332]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name_2": "Plecutan",
+        "Jenis": "Bangunan",
+        "Deskripsi": null
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [201843.5302466395, 9084696.629638903, 93.05678132828479]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name_2": "Reruntuhan Tembok Sisi Selatan",
+        "Jenis": "Reruntuhan",
+        "Deskripsi": null
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [201162.7385555806, 9084289.56985639, 87.70505367966908]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name_2": "Reruntuhan Tembok Sisi Timur",
+        "Jenis": "Reruntuhan",
+        "Deskripsi": null
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [202363.3053420317, 9083822.217133628, 70.4463125719604]
+        ]
+      }
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-import geoFileData from "@/data/tokyo.json";
+import geoFileData from "@/data/situs_macanputih.json";
 import {
   Table,
   TableBody,
@@ -75,15 +75,15 @@ export default function GeoFileExtract() {
   return (
     <div>
       {/* <EducationFacility /> */}
-      <WorshipPlaces />
+      <HistorySites />
     </div>
   );
 }
 
-function WorshipPlaces() {
-  const title = "Fasilitas Ibadah";
-  const worshipPlaces = geoFileData.features.filter(
-    (data) => data.properties.area_en === "Tokubu"
+function HistorySites() {
+  const title = "Situs Sejarah";
+  const historySites = geoFileData.features.filter(
+    (data) => data.type === "Feature"
   );
 
   return (
@@ -97,11 +97,11 @@ function WorshipPlaces() {
           </TableRow>
         </TableHeader>
         <TableBody>
-          {worshipPlaces.map((data, index) => (
+          {historySites.map((data, index) => (
             <TableRow key={index}>
-              <TableCell>{data.properties.area_ja ?? "No Name"}</TableCell>
+              <TableCell>{data.properties.Name_2}</TableCell>
               <TableCell>
-                <CoordinateLink coordinates={data.geometry.coordinates[0]} />
+                <CoordinateLink coordinates={data.geometry.coordinates} />
               </TableCell>
             </TableRow>
           ))}

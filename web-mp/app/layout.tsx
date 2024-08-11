@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
-import "./globals.css";
-import Footer from "./footer";
+import "@/styles/globals.css";
+import Footer from "../components/footer";
 import type { Viewport } from "next";
-import Header from "./header";
+import Header from "../components/header";
 import Head from 'next/head';
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { Organization, WithContext } from "schema-dts";

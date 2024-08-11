@@ -1,11 +1,12 @@
 "use client";
 
 import React, { useState } from "react";
-import { MapContainer, TileLayer, GeoJSON, LayersControl, Marker, useMap } from "react-leaflet";
+import { MapContainer, TileLayer, GeoJSON, LayersControl, useMap } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import "leaflet-defaulticon-compatibility";
 import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";
-import geojsondata from "@/data/tokyo.json";
+import geojsondata from "@/data/situs_macanputih.json";
+import mpWilayah from "@/data/administrasi.json";
 
 const { BaseLayer, Overlay } = LayersControl;
 
@@ -50,15 +51,24 @@ export default function Maps(props: any) {
   const { position, zoom } = props;
 
   const onEachFeature = (feature: any, layer: any) => {
-    if (feature.properties && feature.properties.name) {
-      layer.bindTooltip(feature.properties.name);
+    if (feature.properties && feature.properties.Name_2) {
+      layer.bindTooltip(feature.properties.Name_2);
+      
+      layer.on({
+        click: () => {
+          // alert(`Clicked on: ${feature.properties.Name_2}`);
+          const coordinates = feature.geometry.coordinates[0];
+          const map = layer._map;
+          map.panTo([coordinates[1], coordinates[0]]);
+        }
+      });
     }
   };
 
   return (
     <MapContainer
-      center={[35.658581, 139.745438]}
-      zoom={17}
+      center={[-8.241717241655250, 114.26656311899900]}
+      zoom={14}
       scrollWheelZoom={true}
       style={{ height: "100%", width: "100%" }}
     >
@@ -74,6 +84,10 @@ export default function Maps(props: any) {
         <Overlay checked name="GeoJSON Data">
           {/* @ts-ignore */}
           <GeoJSON data={geojsondata} onEachFeature={onEachFeature} />
+        </Overlay>
+        <Overlay checked name="Macanputih">
+          {/* @ts-ignore */}
+          <GeoJSON data={mpWilayah} onEachFeature={onEachFeature} />
         </Overlay>
       </LayersControl>
     </MapContainer>
