@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import HeroSection from "@/containers/home/hero";
 import BeritaSection from "@/containers/home/berita";
 import PintasanSection from "@/containers/home/pintasan";
-// destinasi
+
 
 export const metadata: Metadata = {
   title: "Selamat Datang Di Media Informasi Desa Macan Putih",

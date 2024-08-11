@@ -1,7 +1,7 @@
 import { MapPin, Mail, GitFork, Share2 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-import logoLong from "@/app/logo-long.png";
+import logoLong from "@/public/logo-long.png";
 import {
   Accordion,
   AccordionContent,

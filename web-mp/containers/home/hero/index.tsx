@@ -18,12 +18,12 @@ export default function HeroSection() {
       </div>
       <section
         id="hero-content"
-        className="flex justify-center items-center w-full absolute top-0 min-h-[650px]"
+        className="flex justify-center items-center w-full absolute top-0 min-h-[65vh]"
       >
         <div className="container mx-auto px-6">
           <div className="flex flex-col items-center -mt-20 bg-no-repeat py-3">
             <h1 className="lg:pt-5 font-extrabold text-white font-intro uppercase text-center leading-10 text-2xl md:text-4xl lg:text-[42px] mb-2 md:mb-3 lg:mb-2 max-w-screen-sm">
-              Desa MacanPutih
+              Media Desa MacanPutih
             </h1>
             <p className="text-gray-300 font-medium leading-relaxed text-center max-w-xl lg:max-w-2xl mb-4 md:mb-7 text-sm md:text-base">
               Temukan referensi dan informasi terkini seputar Desa MacanPutih

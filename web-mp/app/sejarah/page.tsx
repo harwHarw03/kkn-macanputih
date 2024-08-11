@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import MdxRender from "../mdx-render";
+import MdxRender from "../../components/mdx-render";
 import { Metadata } from "next";
 import { ChevronLeft } from "lucide-react";
 import Link from "next/link";
