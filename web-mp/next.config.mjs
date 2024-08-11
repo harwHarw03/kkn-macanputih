@@ -14,9 +14,7 @@ const nextConfig = {
       },
     ],
   },
-  // Configure `pageExtensions`` to include MDX files
   pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],
-  // Optionally, add any other Next.js config below
   async headers() {
     return [
       {
@@ -26,13 +24,13 @@ const nextConfig = {
             "script-src":
               "'self' 'unsafe-eval' 'unsafe-inline' *.googletagmanager.com cdn.jsdelivr.net *.youtube.com *.tableau.com",
             "frame-src":
-              "'self' *.googletagmanager.com *.youtube.com *.google.com *.tableau.com *.openstreetmap.org",
+              "'self' *.googletagmanager.com *.youtube.com *.google.com *.tableau.com *.openstreetmap.org *.server.arcgisonline.com *.opentopomap.org",
             "style-src":
               "'self' 'unsafe-inline' fonts.googleapis.com cdn.jsdelivr.net",
             "connect-src":
-              "'self' *.googletagmanager.com *.google-analytics.com sid.kemendesa.go.id",
+              "'self' *.googletagmanager.com *.google-analytics.com sid.kemendesa.go.id *.openstreetmap.org *.server.arcgisonline.com *.opentopomap.org",
             "img-src":
-              "'self' data: *.ytimg.com *.tile.openstreetmap.org *.bmkg.go.id",
+              "'self' data: *.ytimg.com *.tile.openstreetmap.org *.bmkg.go.id server.arcgisonline.com *.opentopomap.org",
             "frame-ancestors": "'self' *.kemendesa.go.id",
           },
           frameoptions: false,
@@ -43,12 +41,10 @@ const nextConfig = {
 };
 
 const withMDX = createMDX({
-  // Add markdown plugins here, as desired
   options: {
     remarkPlugins: [remarkGfm],
     rehypePlugins: [],
   },
 });
 
-// Merge MDX config with Next.js config
 export default withMDX(nextConfig);

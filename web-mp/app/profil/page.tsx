@@ -5,19 +5,19 @@ import PageContent from "@/components/ui/pageContent";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Statistik Desa MacanPutih",
+  title: "Profil Desa MacanPutih",
   description:
-    "Data statistik Desa MacanPutih, meliputi data jumlah penduduk, jumlah pemilih, dan data lainnya.",
+    "Profil Desa MacanPutih, meliputi sejarah, visi misi, struktur organisasi, dan komunitas.",
   keywords:
-    "Statistik, Data Statistik, Desa MacanPutih, Statistik Desa MacanPutih",
+    "Profil, Desa, Desa MacanPutih, Pofil Desa Macanputih",
 };
 
 export default function PageKepemudaan() {
   return (
     <main className="overflow-hidden">
       <PageHeader
-        title="Statistik Desa MacanPutih"
-        description="Data statistik Desa MacanPutih, meliputi data jumlah penduduk, jumlah pemilih, dan data lainnya."
+        title="Profil Desa MacanPutih"
+        description="Profil Desa MacanPutih, meliputi sejarah, visi misi, struktur organisasi, dan komunitas."
         pagePreviousDescription="Beranda"
         pagePreviousTitle="Beranda"
         pagePreviousUrl="/"
@@ -26,14 +26,14 @@ export default function PageKepemudaan() {
         <section id="akses-cepat" className="bg-white py-12">
           <div className="container mx-auto">
             <div className="grid md:grid-cols-3 md:grid-rows-[auto,1fr] md:gap-x-6 lg:gap-x-20 gap-y-6 lg:gap-y-12">
-              <div className="md:row-start-1 md:col-start-1 md:col-end-4 lg:row-start-auto lg:col-start-auto lg:col-end-auto flex flex-col gap-2 lg:gap-6 p-4">
+              {/* <div className="md:row-start-1 md:col-start-1 md:col-end-4 lg:row-start-auto lg:col-start-auto lg:col-end-auto flex flex-col gap-2 lg:gap-6 p-4">
                 <h2 className="text-center lg:text-left font-bold text-2xl pb-4">
                   Daftar Statistik Desa
                 </h2>
                 <p className="text-center lg:text-left text-sm">
                   Akses data statistik desa MacanPutih dan data terkait.
                 </p>
-              </div>
+              </div> */}
               {availableStatistic.map((service, index) => (
                 <Link
                   key={index}
@@ -62,17 +62,24 @@ export default function PageKepemudaan() {
 
 const availableStatistic = [
   {
-    title: "Penduduk",
+    title: "Sejarah",
     description:
-      "Demografi dan sebaran penduduk dari berbagai aspek",
-    url: "/statistik/penduduk",
+      "Sejarah Desa Macanputih",
+    url: "/profil/sejarah",
     image: "/medialogo.png",
   },
   {
-    title: "Wilayah",
+    title: "Visi dan Misi",
     description:
-      "Demografi wilayah",
-    url: "/statistik/wilayah",
+      "Visi dan Misi Desa Macanputih",
+    url: "/profil/visimisi",
+    image: "/medialogo.png",
+  },
+  {
+    title: "Struktur Organisasi",
+    description:
+      "Struktur Organisasi Desa Macanputih",
+    url: "/profil/struktur",
     image: "/medialogo.png",
   },
 ];

@@ -135,8 +135,8 @@ function SitemapGroup() {
             Profil Macan Putih
           </AccordionTrigger>
           <AccordionContent className="flex flex-col gap-4">
-            <Link href={"/sejarah"}>Sejarah Desa</Link>
-            <Link href={"/kepemudaan"}>Kepemudaan</Link>
+            <Link href={"/profil/sejarah"}>Sejarah Desa</Link>
+            <Link href={"/statistik/penduduk"}>Kepemudaan</Link>
             <Link href={"/peta"}>Peta Desa</Link>
           </AccordionContent>
         </AccordionItem>
@@ -174,8 +174,8 @@ function SitemapGroup() {
         <div className="flex flex-col gap-3 py-4">
           <p className="font-semibold">Profil Macan Putih</p>
           <div className="flex flex-col gap-2">
-            <Link href={"/sejarah"}>Sejarah Desa</Link>
-            <Link href={"/kepemudaan"}>Kepemudaan</Link>
+            <Link href={"/profil/sejarah"}>Sejarah Desa</Link>
+            <Link href={"/statistik/penduduk"}>Kepemudaan</Link>
             <Link href={"/peta"}>Peta Desa</Link>
           </div>
         </div>
