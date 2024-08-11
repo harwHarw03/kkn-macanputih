@@ -72,7 +72,7 @@ export default function HeroSection() {
             <div className="w-full max-w-xl">
               <div className="flex flex-col mt-6 content-center">
                 <Button asChild variant={"default"} className="py-6">
-                  <Link href="/statistik">Statistik Desa MacanPutih</Link>
+                  <Link href="/profil">Profil Desa MacanPutih</Link>
                 </Button>
 
               </div>

@@ -1,9 +1,9 @@
 import PageHeader from "@/components/ui/header";
 import PageContent from "@/components/ui/pageContent";
-import GeoFileExtract from "./goespatialdata";
+import GeoFileExtract from "../../containers/peta/geolist";
 import dynamic from "next/dynamic";
 
-const Map = dynamic(async () => await import("./maps"), {
+const Map = dynamic(async () => await import("../../containers/peta/maps"), {
   ssr: false,
 });
 

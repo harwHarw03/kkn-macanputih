@@ -1,17 +1,18 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import MdxRender from "../../components/mdx-render";
+import MdxRender from "@/components/mdx-render";
 import { Metadata } from "next";
 import { ChevronLeft } from "lucide-react";
 import Link from "next/link";
 import { YouTubeEmbed } from "@next/third-parties/google";
+import PageContent from "@/components/ui/pageContent";
 
 //metadata
 
 export default function Page() {
   // Read and parse the MDX file
-  const pageFilePath = path.join(process.cwd(), "data/sejarah.mdx");
+  const pageFilePath = path.join(process.cwd(), "data/visi-misi.mdx");
   const source = fs.readFileSync(pageFilePath, "utf8");
   const { content, data } = matter(source);
 
@@ -44,18 +45,16 @@ export default function Page() {
               {data.title}
             </h1>
             <p className="text-white font-medium leading-relaxed max-w-xl lg:max-w-2xl mb-4 md:mb-7 text-sm md:text-base">
-              Sejarah desa Macan Putih. Copas Wikipedia
+              Visi dan Misi Desa Macan Putih
             </p>
           </div>
         </section>
       </section>
       <section id="content" className="bg-gray-200">
-        <div className="container mx-auto px-6 2xl:px-0 xl:max-w-7xl relative -top-40 z-20">
-          <div className="p-6 md:p-6 lg:py-8 lg:px-10 rounded-xl bg-white">
-            
+
+          <PageContent>
             <MdxRender source={content} frontMatter={data} />
-          </div>
-        </div>
+          </PageContent>
       </section>
     </main>
   );
