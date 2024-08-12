@@ -12,6 +12,11 @@ const nextConfig = {
         hostname: "drive.google.com",
         port: "",
       },
+      {
+        protocol: "https",
+        hostname: "kkn-macanputih.vercel.app",
+        port: "",
+      },
     ],
   },
   pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],

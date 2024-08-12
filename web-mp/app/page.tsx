@@ -16,7 +16,7 @@ export default function Home() {
     <main className="overflow-hidden">
       <HeroSection />
       <BeritaSection />
-      {/* <PintasanSection /> */}
+      <PintasanSection />
     </main>
   );
 }

@@ -103,7 +103,7 @@ export default function Footer() {
             <p className="text-sm font-normal leading-6 text-white lg:text-left">
               Website ini tidak dalam pengelolaan pemerintah desa Macan Putih.
               Segala konten yang ada di website ini merupakan referensi semata
-              yang dikelola oleh Tim Media Macan Putih. Seluruhnya yang
+              yang dikelola oleh Tim Media KKN-PPM UGM Macanputih, Kabat. Seluruhnya yang
               terdapat pada website ini tidak menyatakan sikap resmi dari
               pemerintah desa Macan Putih.
             </p>

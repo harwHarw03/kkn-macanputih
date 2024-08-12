@@ -1,4 +1,10 @@
 
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
+import { buttonVariants } from "@/components/ui/button";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
@@ -33,16 +39,16 @@ export default function HeroSection() {
                 <h2 className="font-bold text-base leading-6 text-center text-gray-300 mb-4">
                   Seputar Desa MacanPutih
                 </h2>
-                {/* <Carousel>
+                <Carousel>
                   <CarouselContent>
                     <CarouselItem className="basis-1/2">
                       <Link
                         className={`${buttonVariants({
                           variant: "outline",
                         })} w-full py-4 font-semibold`}
-                        href={"/sejarah"}
+                        href={"/profil/sejarah"}
                       >
-                        Sejarah Kuy
+                        Sejarah
                       </Link>
                     </CarouselItem>
                     <CarouselItem className="basis-1/2">
@@ -60,13 +66,13 @@ export default function HeroSection() {
                         className={`${buttonVariants({
                           variant: "outline",
                         })} w-full py-4 font-semibold`}
-                        href={"/kepemudaan"}
+                        href={"/peta"}
                       >
-                        Kepemudaan
+                        Peta
                       </Link>
                     </CarouselItem>
                   </CarouselContent>
-                </Carousel> */}
+                </Carousel>
               </section>
             </div>
             <div className="w-full max-w-xl">
@@ -74,7 +80,6 @@ export default function HeroSection() {
                 <Button asChild variant={"default"} className="py-6">
                   <Link href="/profil">Profil Desa MacanPutih</Link>
                 </Button>
-
               </div>
             </div>
 

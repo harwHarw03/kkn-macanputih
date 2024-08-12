@@ -40,12 +40,12 @@ export default function PageKepemudaan() {
                   href={service.url}
                   className="flex flex-col items-start justify-center p-4 hover:bg-green-50 rounded-lg group transition-colors ease-brand duration-250 gap-4"
                 >
-                  <Image
+                  {/* <Image
                     src={`${service.image || "/medialogo.png"}`}
                     alt={service.title}
                     width={40}
                     height={40}
-                  />
+                  /> */}
                   <h3 className="font-bold text-lg text-gray-800">
                     {service.title}
                   </h3>
@@ -66,20 +66,20 @@ const availableStatistic = [
     description:
       "Sejarah Desa Macanputih",
     url: "/profil/sejarah",
-    image: "/medialogo.png",
+    // image: "/medialogo.png",
   },
   {
     title: "Visi dan Misi",
     description:
       "Visi dan Misi Desa Macanputih",
     url: "/profil/visimisi",
-    image: "/medialogo.png",
+    // image: "/medialogo.png",
   },
   {
     title: "Struktur Organisasi",
     description:
       "Struktur Organisasi Desa Macanputih",
     url: "/profil/struktur",
-    image: "/medialogo.png",
+    // image: "/medialogo.png",
   },
 ];

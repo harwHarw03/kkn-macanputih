@@ -41,7 +41,7 @@ export default function PageKepemudaan() {
                   className="flex flex-col items-start justify-center p-4 hover:bg-green-50 rounded-lg group transition-colors ease-brand duration-250 gap-4"
                 >
                   <Image
-                    src={`${service.image || "/medialogo.png"}`}
+                    src={`"/medialogo.png"}`}
                     alt={service.title}
                     width={40}
                     height={40}
@@ -66,13 +66,13 @@ const availableStatistic = [
     description:
       "Demografi dan sebaran penduduk dari berbagai aspek",
     url: "/statistik/penduduk",
-    image: "/medialogo.png",
+    // image: "/medialogo.png",
   },
   {
     title: "Wilayah",
     description:
       "Demografi wilayah",
     url: "/statistik/wilayah",
-    image: "/medialogo.png",
+    // image: "/medialogo.png",
   },
 ];
